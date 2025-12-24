@@ -195,6 +195,9 @@ flatpickr("#time", {
 	dateFormat: "h:i K",      // 12-годинний формат з AM/PM (наприклад: 03:45 PM)
 	time_24hr: false,         // Явно вимкнути 24-годинний режим
 	disableMobile: true,
+	defaultHour: 6,
+	defaultMinute: 30,
+	allowInput: true,
 });
 document.addEventListener("DOMContentLoaded", function () {
 	flatpickr("#date", {
