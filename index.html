@@ -8,6 +8,7 @@
     <meta name="description"
         content="Professional transport services in Las Vegas. Airport transfers, casino rides, restaurant trips, and more.">
     <title>HAUL IT GIRL Transport - Premium Transportation Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/main-styles.css">
 </head>
 
@@ -37,8 +38,9 @@
                             <ul class="info-header__list">
                                 <li class="info-header__item">
                                     <div class="info-header__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
                                             <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                                             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                                         </svg>
@@ -87,15 +89,13 @@
                     <img src="img/hero/hero-back.jpg" alt="">
                 </div>
             </div>
-            <section class='services' aria-labelledby='services-title'>
+            <section class='services section' aria-labelledby='services-title'>
                 <div class='services__container'>
-                    <div class="services__header">
-                        <h2 class="services__title title" id="services-title">
+                    <div class="services__header section-header">
+                        <h2 class="services__title title section-header__title" id="services-title">
                             Where are you going today? Let's get you there.
                         </h2>
-                        <div class="services__subtitle">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis iste cum similique debitis nisi nostrum ab voluptates voluptas quo commodi placeat, neque reprehenderit magni ipsa voluptate necessitatibus id obcaecati deleniti!
-                        </div>
+
                     </div>
                     <div class="services__columns columns">
                         <div class="columns__item">
@@ -149,11 +149,173 @@
                     </div>
                 </div>
             </section>
+            <section class='transport-info section' aria-labelledby='transport-info-title'>
+                <div class='transport-info__container'>
+                    <div class="transport-info__header section-header">
+                        <h2 class="transport-info__title title section-header__title" id="transport-info-title">
+                            Transportation Information
+                        </h2>
+                        <div class="transport-info__subtitle section-header__subtitle">
+                            <p>1 car provided with 1 driver to drive to assigned destination(s).</p>
+                        </div>
+                    </div>
+                    <div class="transport-info__columns columns">
+                        <div class="columns__item">
+                            <div class="columns__image ibg">
+                                <img src="img/transport-info/car1.jpg" loading="lazy" alt="">
+                            </div>
+                        </div>
+                        <div class="columns__item">
+                            <div class="columns__image ibg">
+                                <img src="img/transport-info/car2.jpg" loading="lazy" alt="">
+                            </div>
+                        </div>
+                        <div class="columns__item">
+                            <div class="columns__image columns__image-opr ibg">
+                                <img src="img/transport-info/car3.jpg" loading="lazy" alt="">
+                            </div>
+                        </div>
+                        <div class="columns__item">
+                            <div class="columns__image ibg">
+                                <img src="img/transport-info/car4.jpg" loading="lazy" alt="">
+                            </div>
+                        </div>
+                        <div class="columns__item">
+                            <div class="columns__image ibg">
+                                <img src="img/transport-info/car5.jpg" loading="lazy" alt="">
+                            </div>
+                        </div>
+                        <div class="columns__item">
+                            <div class="columns__image ibg">
+                                <img src="img/transport-info/car6.jpg" loading="lazy" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class='contact section' aria-labelledby='contact-title'>
+                <div class='contact__container'>
+                    <div class="contact__header section-header">
+                        <h2 class="contact__title title section-header__title" id="contact-title">
+                            Trip Appointment Request Form
+                        </h2>
+                        <div class="contact__subtitle section-header__subtitle">
+                            Fill out the form below to request a trip appointment
+                        </div>
+                    </div>
+                    <div class="contact__body">
+                        <form action="#" class="form-contact">
+                            <div class="form-contact__body">
+                                <div class="form-contact__item">
+                                    <label for="legal-name" class="form-contact__label">
+                                        First and Last Legal Name <span>*</span>
+                                    </label>
+                                    <input type="text" name="legal-name" id="legal-name" class="form-contact__input"
+                                        required>
+                                </div>
+                                <div class="form-contact__item">
+                                    <label for="preferred-name" class="form-contact__label">
+                                        Preferred Name <span>*</span>
+                                    </label>
+                                    <input type="text" name="preferred-name" id="preferred-name"
+                                        class="form-contact__input" required>
+                                </div>
+                                <div class="form-contact__item">
+                                    <label for="email" class="form-contact__label">
+                                        Email Address <span>*</span>
+                                    </label>
+                                    <input type="email" name="email" id="email" class="form-contact__input"
+                                        required>
+                                </div>
+                                <div class="form-contact__item">
+                                    <label for="phone-number" class="form-contact__label">
+                                        Phone Number <span>*</span>
+                                    </label>
+                                    <input data-only-numb type="tel" name="phone-number" id="phone-number"
+                                        class="form-contact__input" required>
+                                </div>
+                                <div class="form-contact__item">
+                                    <label for="date" class="form-contact__label">
+                                        Date <span>*</span>
+                                    </label>
+                                    <input type="date" name="date" id="date" class="form-contact__input" required>
+                                </div>
+                                <div class="form-contact__item">
+                                    <label for="time" class="form-contact__label">
+                                        Time <span>*</span>
+                                    </label>
+                                    <input type="text" name="time" id="time" class="form-contact__input" required>
+                                </div>
+                                <div class="form-contact__item form-contact__item-fw">
+                                    <label for="from-address" class="form-contact__label">
+                                        From Address <span>*</span>
+                                    </label>
+                                    <input type="text" name="from-address" id="from-address"
+                                        class="form-contact__input" required>
+                                </div>
+                                <div class="form-contact__item form-contact__item-fw">
+                                    <label for="to-address" class="form-contact__label">
+                                        To Address <span>*</span>
+                                    </label>
+                                    <input type="text" name="to-address" id="to-address" class="form-contact__input"
+                                        required>
+                                </div>
+                                <div class="form-contact__item">
+                                    <label for="number-addit-riders" class="form-contact__label">
+                                        Number of Additional Riders <span>*</span>
+                                    </label>
+                                    <input data-only-numb type="text" name="number-addit-riders"
+                                        id="number-addit-riders" class="form-contact__input" required>
+                                </div>
+                                <div class="form-contact__item">
+                                    <label for="names-adit-riders" class="form-contact__label">
+                                        Additional Riders First and Last Legal Name <span>*</span>
+                                    </label>
+                                    <input data-only-numb type="text" name="names-adit-riders"
+                                        id="names-adit-riders" class="form-contact__input" required>
+                                </div>
+
+                                <div class="form-contact__item form-contact__item-fw">
+                                    <label for="message" class="form-contact__label">
+                                        Additional Details (optional)
+                                    </label>
+                                    <textarea name="" id="message"  class="form-contact__input" placeholder="Any special requirements or additional information..." ></textarea>
+                                   
+                                </div>
+                            </div>
+                            <div class="form-contact__disclaimer">
+                                Trip and travel costs will be configured. A quote will be emailed to you shortly.
+                            </div>
+                            <button class="form-contact__button button button-dark">
+                                Submit Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
-
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/script.js"></script>
-
+    <script>
+        flatpickr("#time", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "h:i K",      // 12-годинний формат з AM/PM (наприклад: 03:45 PM)
+            time_24hr: false,         // Явно вимкнути 24-годинний режим
+            disableMobile: true,
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            flatpickr("#date", {
+                dateFormat: "d.m.Y",     // Формат дати: 25.12.2025 (зручний для України)
+                allowInput: true,        // Дозволяє вручну вводити дату (з валідацією)
+                disableMobile: true,     // На мобілці використовуємо кастомний календар, а не нативний
+                minDate: "today",        // Опціонально: заборонити вибір минулих дат
+                defaultDate: "today",  // Опціонально: відкривати на сьогоднішній даті
+            });
+        });
+    </script>
 </body>
 
 </html>
