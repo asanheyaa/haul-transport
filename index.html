@@ -204,7 +204,7 @@
                         </div>
                     </div>
                     <div class="contact__body">
-                        <form action="#" class="form-contact">
+                        <form action="send-email.php" method="POST" class="form-contact">
                             <div class="form-contact__body">
                                 <div class="form-contact__item">
                                     <label for="legal-name" class="form-contact__label">
@@ -279,7 +279,7 @@
                                     <label for="message" class="form-contact__label">
                                         Additional Details (optional)
                                     </label>
-                                    <textarea name="" id="message"  class="form-contact__input" placeholder="Any special requirements or additional information..." ></textarea>
+                                    <textarea name="message" id="message"  class="form-contact__input" placeholder="Any special requirements or additional information..." ></textarea>
                                    
                                 </div>
                             </div>
@@ -293,29 +293,145 @@
                     </div>
                 </div>
             </section>
+            <section class='faq section' aria-labelledby='faq-title'>
+                <div class='faq__container'>
+                    <div class="faq__header section-header">
+                        <h2 class="faq__title section-header__title title" id="faq-title">
+                            Frequently Asked Questions
+                        </h2>
+                    </div>
+                    <div class="body-faq" data-spollers data-one-spoller>
+                        <div class="body-faq__item">
+                            <button type="button" class="body-faq__header" data-spoller tabindex="-1" >
+                                <span class="body-faq__text">
+                                    How far in advance should I book my trip?
+                                </span>
+                                <span class="body-faq__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="body-faq__content">
+                                <p>
+                                    We recommend booking at least 24 hours in advance to ensure availability. However, we do our best to accommodate
+                                    last-minute requests when possible.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="body-faq__item">
+                            <button type="button" class="body-faq__header" data-spoller tabindex="-1">
+                                <span class="body-faq__text">
+                                    What areas do you serve?
+                                </span>
+                                <span class="body-faq__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="body-faq__content">
+                                <p>
+                                We provide transportation services throughout the Las Vegas metropolitan area, including trips to and from the airport,
+                                hotels, casinos, restaurants, shows, medical appointments, and more.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="body-faq__item">
+                            <button type="button" class="body-faq__header" data-spoller tabindex="-1">
+                                <span class="body-faq__text">
+                                How is pricing calculated?
+                                </span>
+                                <span class="body-faq__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="body-faq__content">
+                                <p>
+                            Pricing is based on several factors including distance, time of day, and number of passengers. After you submit your
+                            trip request, we'll send you a detailed quote via email within a few hours.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="body-faq__item">
+                            <button type="button" class="body-faq__header" data-spoller tabindex="-1">
+                                <span class="body-faq__text">
+                                Can I modify or cancel my reservation?
+                                </span>
+                                <span class="body-faq__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="body-faq__content">
+                                <p>
+                                Yes, you can modify or cancel your reservation up to 12 hours before your scheduled pickup time without penalty. Please
+                                contact us as soon as possible if your plans change.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="body-faq__item">
+                            <button type="button" class="body-faq__header" data-spoller tabindex="-1">
+                                <span class="body-faq__text">
+                                    What payment methods do you accept?
+                                </span>
+                                <span class="body-faq__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="body-faq__content">
+                                <p>
+                                We accept all major credit cards, debit cards, and cash. Payment can be made in advance or at the time of service. We'll
+                                provide payment instructions in your quote email.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="body-faq__item">
+                            <button type="button" class="body-faq__header" data-spoller tabindex="-1">
+                                <span class="body-faq__text">
+                                    Do you offer group transportation?
+                                </span>
+                                <span class="body-faq__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="body-faq__content">
+                                <p>
+                                Yes! We can accommodate groups of various sizes. Please indicate the number of additional riders in your trip request
+                                form, and we'll arrange appropriate transportation for your group.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__copy">
+                    © 2025 - 2026 HAUL IT GIRL Transport. All rights reserved.
+                </div>
+            </div>
+        </footer>
     </div>
     <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/script.js"></script>
-    <script>
-        flatpickr("#time", {
-            enableTime: true,
-            noCalendar: true,
-            dateFormat: "h:i K",      // 12-годинний формат з AM/PM (наприклад: 03:45 PM)
-            time_24hr: false,         // Явно вимкнути 24-годинний режим
-            disableMobile: true,
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-            flatpickr("#date", {
-                dateFormat: "d.m.Y",     // Формат дати: 25.12.2025 (зручний для України)
-                allowInput: true,        // Дозволяє вручну вводити дату (з валідацією)
-                disableMobile: true,     // На мобілці використовуємо кастомний календар, а не нативний
-                minDate: "today",        // Опціонально: заборонити вибір минулих дат
-                defaultDate: "today",  // Опціонально: відкривати на сьогоднішній даті
-            });
-        });
-    </script>
+ 
 </body>
 
 </html>
