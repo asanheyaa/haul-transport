@@ -1,4 +1,4 @@
-$containerWidth: 1536;
+$containerWidth: 1310;
 
 @import "nullstyle.scss";
 @import "mixins.scss";
@@ -12,11 +12,11 @@ body {
 
 body {
 	line-height: 1;
-	font-family: Roboto, sans-serif;
-	font-weight: 500;
+	font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 	@include adaptiveValue(font-size, 20, 18);
 	line-height: 140%;
-	color: #1d1d1d;
+	color: #000;
+	-webkit-font-smoothing:antialiased;
 	&._lock {
 		overflow: hidden;
 	}
@@ -40,11 +40,215 @@ body {
 [class*="__container"] {
 	max-width: $containerWidth + px;
 	margin: 0 auto;
-	@media (min-width: 991.98px) {
-		padding: 0 3rem;
+	padding: 0 15px;
+}
+
+.button {
+	padding: 5px 15px;
+	background: lab(85.9311% 17.6601 47.6659);
+	transition: all 0.3s ease 0s;
+	color: #000;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	@media (any-hover: hover){
+		&:hover{
+			background:  color-mix(in oklab, lab(85.9311% 17.6601 47.6659) 80%, transparent);
+		}
 	}
-	padding: 0 1.4375rem;
-	@media (max-width: 24.0625rem) {
-		padding: 0 0.9375rem;
+}
+
+.ibg {
+	position: relative;
+	img{
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		object-fit: cover;
+		object-position: center;
 	}
+}
+
+.title {
+	@include adaptiveValue(font-size, 48, 30);
+	font-weight: 700;
+	text-align: center;
+	line-height: 1;
+}
+
+//==================================================================================================
+
+.header {
+background: lab(12.6688% 2.11811 -14.482);
+color: #fff;
+padding: 12px 0;
+		// .header__container
+
+		&__container {
+		}
+
+		// .header__body
+
+		&__body {
+		}
+
+		// .header__actions
+
+		&__actions {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+			justify-content: space-between;
+			margin-bottom: 12px;
+		}
+
+		// .header__logo
+
+		&__logo {
+			color: #fff;
+			@include adaptiveValue(font-size, 20, 16);
+			font-weight: 700;
+			flex: 1 1 auto;
+		}
+
+		// .header__button
+
+		&__button {
+			flex: 0 0 auto;
+		}
+}
+
+.info-header {
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+		// .info-header__avatar
+
+		&__avatar {
+			max-width: 40px;
+			aspect-ratio: 1/1;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+
+		// .info-header__details
+
+		&__details {
+			font-size: 14px;
+		
+			line-height: calc(1.25/.875);
+		}
+
+		// .info-header__name
+
+		&__name {
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+
+		// .info-header__list
+
+		&__list {
+			display: flex;
+			align-items: center;
+			column-gap: 16px;
+			row-gap: 4px;
+			@media (max-width:767.98px) {
+				flex-direction: column;
+				align-items: flex-start;
+
+			}
+		}
+
+		// .info-header__item
+
+		&__item {
+			display: flex;
+			gap: 4px;
+			align-items: center;
+			@media (min-width:767.98px) {
+				
+			}
+		}
+
+		// .info-header__icon
+
+		&__icon {
+			@include svgSizes( 16, 16);
+		}
+
+		// .info-header__link
+
+		&__link {
+			color: #fff;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover){
+				&:hover{
+					opacity: .8;
+				}
+			}
+		}
+}
+
+//==================================================================================================
+
+.hero {
+
+		// .hero__decor
+
+		&__decor {
+			padding-bottom: 40%;
+			min-height: 450px;
+		}
+}
+
+//==================================================================================================
+
+.services {
+	@include adaptiveValue(padding-block, 64, 40);
+		// .services__container
+
+		&__container {
+		}
+
+		// .services__header
+
+		&__header {
+		}
+
+		// .services__title
+
+		&__title {
+
+		}
+
+		// .services__subtitle
+
+		&__subtitle {
+		}
+
+		// .services__columns
+
+		&__columns {
+		}
+}
+
+.columns {
+
+		// .columns__item
+
+		&__item {
+		}
+
+		// .columns__image
+
+		&__image {
+		}
+
+		// .columns__label
+
+		&__label {
+		}
 }
