@@ -236,3 +236,45 @@ document.addEventListener("DOMContentLoaded", function () {
 		defaultDate: "today",
 	});
 });
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+	let expires = "";
+	if (days) {
+		const date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+	document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+	const nameEQ = name + "=";
+	const ca = document.cookie.split(';');
+	for (let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+	}
+	return null;
+}
+
+
+setTimeout(() => {
+	// console.log(getCookie("cookies_accepted"));
+	document.querySelector('.cookies-banner').classList.add('_show')
+	if (!getCookie("cookies_accepted")) {
+	}
+}, 5000);
+
+// Accept button
+document.querySelector(".cookies-banner__button").addEventListener("click", function () {
+	setCookie("cookies_accepted", "true", 30); // 30 days
+	document.querySelector(".cookies-banner").classList.remove('_show')
+});
+
+// // Learn more button (you can change it to open your policy page)
+// document.getElementById("more-info").addEventListener("click", function () {
+// 	window.open("/privacy-policy", "_blank");
+// });
