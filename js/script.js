@@ -189,11 +189,39 @@ function spollers() {
 spollers()
 
 
+ function onlyNumb() {
+	const inputs = document.querySelectorAll('[data-only-numb]');
+	if (inputs) {
+		inputs.forEach(input => {
+			input.setAttribute('inputmode', 'numeric');
+			input.addEventListener('input', (e) => {
+				let value = e.target.value;
+				e.target.value = value.replace(/\D/g, '')
+			})
+		})
+
+	}
+}
+
+onlyNumb() 
+
+
+document.getElementById('time').addEventListener('keydown', function (e) {
+	e.preventDefault();  
+});
+document.getElementById('time').addEventListener('paste', function (e) {
+	e.preventDefault();  
+});
+document.getElementById('time').addEventListener('focus', function () {
+	this.blur();  
+});
+
+
 flatpickr("#time", {
 	enableTime: true,
 	noCalendar: true,
-	dateFormat: "h:i K",      // 12-годинний формат з AM/PM (наприклад: 03:45 PM)
-	time_24hr: false,         // Явно вимкнути 24-годинний режим
+	dateFormat: "h:i K",     
+	time_24hr: false,        
 	disableMobile: true,
 	defaultHour: 6,
 	defaultMinute: 30,
@@ -201,10 +229,10 @@ flatpickr("#time", {
 });
 document.addEventListener("DOMContentLoaded", function () {
 	flatpickr("#date", {
-		dateFormat: "d.m.Y",     // Формат дати: 25.12.2025 (зручний для України)
-		allowInput: true,        // Дозволяє вручну вводити дату (з валідацією)
-		disableMobile: true,     // На мобілці використовуємо кастомний календар, а не нативний
-		minDate: "today",        // Опціонально: заборонити вибір минулих дат
-		defaultDate: "today",  // Опціонально: відкривати на сьогоднішній даті
+		dateFormat: "d.m.Y",    
+		allowInput: true,        
+		disableMobile: true,    
+		minDate: "today",       
+		defaultDate: "today",
 	});
 });
